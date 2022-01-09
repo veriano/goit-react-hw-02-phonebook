@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-
-function ElementContactList ({name, number}) {
+function ElementContactList ({ name, number }) {
     return (
-        <li><span>{name}</span>: <span>{number}</span></li>
+        <li><span><b>{name}</b></span>: <span><b>{number}</b></span></li>
     )
 }
 

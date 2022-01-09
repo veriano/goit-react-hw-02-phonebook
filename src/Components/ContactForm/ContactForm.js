@@ -34,7 +34,7 @@ class ContactForm extends Component {
         return (
             <form className={s.Form} onSubmit={this.handleSubmit}>
         <label>
-         <span className={s.Label}> Имя </span>
+         <span className={s.Label}> Name </span>
       <input className={s.Input}
       type="text" value={name} 
       onChange={this.handleChange}
