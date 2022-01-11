@@ -27,10 +27,7 @@ class App extends Component {
       number: data.number,
     }
     this.setState(({ contacts }) => {
-      if (contacts.includes(contact.name)) {
-        alert('Hello')
-      } else 
-      
+    
         return {
           contacts: [contact, ...contacts],
         }
