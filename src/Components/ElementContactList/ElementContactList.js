@@ -1,15 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import s from './ElementContactList.module.css';
 
-function ElementContactList ({ name, number }) {
+function ElementContactList ({ id, name, number, onDelete }) {
     return (
-        <li><span><b>{name}</b></span>: <span><b>{number}</b></span></li>
+        <li className={s.Item}><span><b>{name}</b></span>: <span><b>{number}</b>
+        </span><button className={s.Button} onClick={() =>
+            onDelete(id)}>Delete</button></li>
     )
 }
 
 ElementContactList.propTypes = {
+    id: PropTypes.string,
     name: PropTypes.string,
-    number:PropTypes.string,
+    number: PropTypes.string,
+    onDelete: PropTypes.array,
 }
 
 export default ElementContactList;
