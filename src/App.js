@@ -27,12 +27,11 @@ class App extends Component {
       number: data.number,
     }
     this.setState(({ contacts }) => {
-    
+
         return {
           contacts: [contact, ...contacts],
         }
-      
-    })
+      })
   }
 
   deleteContact = (contactId) => {
@@ -53,16 +52,17 @@ class App extends Component {
 
     const visibleContacts = this.getVisibleContacts();
    
-  return (
+    return (
       <>
         <h1 className={s.Title}><b>Phonebook</b></h1>
-      <ContactForm onSubmitHandler={this.addContact} />
+      <ContactForm onSubmitHandler={ this.addContact } />
       
         <h2 className={s.Title}><b>Contacts</b></h2>
         <Filter value={ filter } onChange={ this.changeFilter }/>
-      <ContactList contacts={visibleContacts}
-        onDeleteContact={this.deleteContact} />
-      </>
+        <ContactList
+          contacts={visibleContacts}
+          onDeleteContact={ this.deleteContact }  />
+        </>
     )
   }
 

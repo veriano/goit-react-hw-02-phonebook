@@ -13,7 +13,7 @@ function Contacts ({ contacts, onDeleteContact }) {
             id={contact.id}
             name={contact.name}
             number={contact.number}
-            onDelete={onDeleteContact}
+            onDelete={ onDeleteContact }
           /> 
         ))}
        </ul>
@@ -24,4 +24,5 @@ function Contacts ({ contacts, onDeleteContact }) {
 Contacts.propTypes = {
     contacts: PropTypes.array,
 }
+
 export default Contacts;
