@@ -27,7 +27,12 @@ class App extends Component {
       number: data.number,
     }
     this.setState(({ contacts }) => {
-
+      for (const contact of contacts) {
+        if (contact.name.toLowerCase() === data.name.toLowerCase()) {
+          alert(`${data.name} already in contacts.`);
+          return contacts;
+        }
+    }
         return {
           contacts: [contact, ...contacts],
         }
