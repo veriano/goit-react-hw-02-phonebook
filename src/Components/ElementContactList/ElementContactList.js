@@ -6,7 +6,7 @@ function ElementContactList({ id, name, number, onDelete }) {
 
     return (
         <li className={s.Item}><span><b>{name}</b></span>: <span><b>{number}</b>
-        </span><button className={s.Button} onClick={ () => onDelete(id) }>Delete</button></li>
+        </span><button className={s.Button} type='button' onClick={ () => onDelete(id) }>Delete</button></li>
     )
 }
 
