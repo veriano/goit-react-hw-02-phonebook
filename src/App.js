@@ -30,7 +30,7 @@ class App extends Component {
       for (const contact of contacts) {
         if (contact.name.toLowerCase() === data.name.toLowerCase()) {
           alert(`${data.name} already in contacts.`);
-          return contacts;
+          return;
         }
     }
         return {
